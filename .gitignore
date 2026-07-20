@@ -1,0 +1,45 @@
+# Python — auto-generated cache files (recreate themselves, don't upload)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter — notebook temp/checkpoint files (Jupyter auto-creates these)
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Virtual environments — each machine creates its own (don't upload)
+venv/
+ENV/
+env/
+
+# IDE — your personal editor settings (not needed by others)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS — operating system junk files (auto-created, not needed)
+.DS_Store
+Thumbs.db
+
+# Data (optional—uncomment if dataset is huge)
+# data/raw/*.csv
+# data/raw/*.mat
