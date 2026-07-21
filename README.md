@@ -90,7 +90,7 @@ Six phases in the notebook:
 
 ## Key Findings
 
-The data came out clean. No NaN values, no flat or dead windows anywhere. The values are already normalized (around -5 to 4, std about 0.16), not raw millivolt readings like EMG is usually measured in. The labels are perfectly balanced, 34,800 windows per gesture. One thing worth noting: the data is stored in blocks by gesture, not shuffled, so splitting it into train/test needs to shuffle or stratify first, otherwise you could end up testing on a totally different gesture than you trained on. The current split uses `shuffle=True`, so this is handled.
+The data came out clean. No NaN values, no flat or dead windows anywhere. The values are already normalized (around -5 to 4, std about 0.16), not raw millivolt readings like EMG is usually measured in. The labels are perfectly balanced, 34,800 windows per gesture. One thing worth noting: the data is stored in blocks by gesture, so splitting it into train/test needs to shuffle or stratify first, otherwise you could end up testing on a totally different gesture than you trained on. The current split uses `shuffle=True`
 
 A simple classifier (logistic regression using the mean absolute value of each channel, just 3 numbers per window) gets about 63% accuracy on a 5-class problem where guessing randomly would get 20%. Not amazing, but a reasonable starting point for such a small feature set and a basic model.
 
@@ -99,10 +99,7 @@ A simple classifier (logistic regression using the mean absolute value of each c
 ## Future Work & Notes
 
 - Try more features per channel (RMS, waveform length, zero-crossing rate), not just mean absolute value
-- Stratify the train/test split on purpose (`stratify=gesture_number`) instead of just shuffling
-- Look at a confusion matrix or per-class accuracy, not just the overall number, to see which gestures get mixed up
-- Try other models (SVM, random forest) and compare to logistic regression
-- Double check the gesture-to-column mapping against DS1's actual documentation
+- Try other models to compare
+- Double check the gesture-to-column mapping against DS1
 - Eventually try real-time classification for actual prosthetic control
 - Raw data files aren't in this repo, see the note above and `.gitignore`
-- This is a beginner project, so the code is written to be easy to follow, not to be fast or fancy
