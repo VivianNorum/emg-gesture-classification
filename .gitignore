@@ -1,4 +1,4 @@
-# Python — auto-generated cache files (recreate themselves, don't upload)
+# Python cache files, these get made automatically so no need to upload them
 __pycache__/
 *.py[cod]
 *$py.class
@@ -20,26 +20,28 @@ wheels/
 .installed.cfg
 *.egg
 
-# Jupyter — notebook temp/checkpoint files (Jupyter auto-creates these)
+# Jupyter checkpoint files, these get made automatically
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Virtual environments — each machine creates its own (don't upload)
+# Virtual environment, everyone makes their own so no need to upload it
 venv/
 ENV/
 env/
 
-# IDE — your personal editor settings (not needed by others)
+# Editor settings, just mine, no one else needs these
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS — operating system junk files (auto-created, not needed)
+# OS junk files that get made automatically, don't need these
 .DS_Store
 Thumbs.db
 
-# Data (optional—uncomment if dataset is huge)
-# data/raw/*.csv
-# data/raw/*.mat
+# Large dataset files (download from Kaggle)
+data/raw/*.mat
+data/raw/*.csv
+data/raw/*.tdms
+data/raw/*.npy

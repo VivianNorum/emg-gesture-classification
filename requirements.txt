@@ -1,7 +1,7 @@
-numpy==1.24.0
-pandas==2.0.0
-matplotlib==3.7.0
-scipy==1.10.0
-scikit-learn==1.2.0
-jupyter==1.0.0
-ipython==8.12.0
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+jupyter
+ipykernel
