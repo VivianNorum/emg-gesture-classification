@@ -85,6 +85,7 @@ Six phases in the notebook:
 | 4 | Plot one example window per gesture, side by side | 5 plots |
 | 5 | Check for missing values, dead/flat windows, and the signal range | no problems found |
 | 6 | Get the mean absolute value per channel, split into train/test, train a `LogisticRegression` model | `features`, shape (174000, 3), accuracy around 63% |
+| 6b | Bar chart of average channel activation (MAV) per gesture | shows which channels separate which gestures |
 
 ---
 
@@ -100,6 +101,5 @@ A simple classifier (logistic regression using the mean absolute value of each c
 
 - Try more features per channel (RMS, waveform length, zero-crossing rate), not just mean absolute value
 - Try other models to compare
-- Double check the gesture-to-column mapping against DS1
 - Eventually try real-time classification for actual prosthetic control
 - Raw data files aren't in this repo, see the note above and `.gitignore`
